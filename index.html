@@ -15,6 +15,53 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+         <title>Money Button Paywall</title>
+  <style>
+    body {
+      width: 90%;
+      margin: 10vh auto;
+      /* System default fonts */
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    }
+    code {
+      color: deeppink;
+      /* Baseline shift */
+      position: relative;
+      top: -0.05em;
+    }
+    pre {
+      color: lightseagreen;
+    }
+    blockquote {
+      background-color: #eee;
+      padding: 1em;
+      border-radius: 1em;
+      margin: 1em 0;
+    }
+
+    /* The CSS you'll need in your website */
+    #unlockable {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 5s;
+    }
+    #unlockable.unlocked {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+  <script>
+    /* The Javascript you'll need in your website */
+    function handleSuccessfulPayment (payment) {
+      unlockContent();
+    }
+    function handleFailedPayment (error) {
+      alert("Sorry, the payment did not process correctly.")
+    }
+    function unlockContent () {
+      document.getElementById("unlockable").classList.toggle("unlocked");
+    }
+  </script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -98,6 +145,49 @@
                 </div>
             </div>
         </section>
+<center>
+<h1>Boost your interactions</h1>
+
+<!-- Free content -->
+<p>For a flat $5.00 fee, you can recruit our contractors to provide engagement on any twitter post.</p> <p>Our contractors are paid $0.10 per work offer and you will receive up to 50 unique interactions.</p>
+
+<p><em>Slide the Money Button to submit a tweet for interaction boosting.</em></p>
+
+<!-- Money Button -->
+<div class="money-button"
+  data-to="21534"
+  data-amount="5"
+  data-currency="USD"
+  data-label="Buy Media"
+  data-client-identifier="9981645a3e83f2941b9574288e85d182"data-button-id="1652826574446"
+  data-button-id="1539888464998"
+  data-button-data="{}"
+  data-type="buy"
+  data-on-payment="handleSuccessfulPayment"
+  data-on-error="handleFailedPayment"
+  data-dev-mode="false"
+></div></center>
+
+<!-- Hidden content -->
+<div id="unlockable">
+<script>
+            function myFunction() {
+         window.location.href="http://t.me/digitalcurrencydaily";  
+       }
+     </script>
+  <center><p>Now that you have paid for the twitter engagement,</p>
+  <p>you need to submit the URL to the tweet.</p>
+  <p>Join the Telegram below to share the URL with our WorkGroup</p></center>
+ 
+    
+</div>
+
+<!-- Money Button script -->
+<script src="https://www.moneybutton.com/moneybutton.js"></script>
+    
+     
+        
+       
         <!-- About Section-->
         <section class="page-section bg-info text-white mb-0" id="about">
             <div class="container">
