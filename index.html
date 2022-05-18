@@ -62,6 +62,7 @@
       document.getElementById("unlockable").classList.toggle("unlocked");
     }
   </script>
+        <script src="https://www.moneybutton.com/moneybutton.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -147,18 +148,24 @@
         
 <section>        
 <center>
+    
+
 <h1>Boost your interactions</h1>
 
 <!-- Free content -->
-<p>For a flat $5.00 fee, you can recruit our contractors to provide engagement on a twitter post. <br>Our contractors are paid $0.10  to provide a like & retweet.<br>Your tweet will receive up to 50 Likes & retweets per user. <br>The contractors submit their work for verification to receive Workpay.</p>
-    <br>Once you have paid the service fee, your submission will be reviewed to ensure it matches our community guidelines. <p>If your tweet is rejected, a refund will be issued to your Money Button wallet within 24 hours.</p>
+<p>For a flat $5.00 fee, you can recruit our contractors to provide engagement on a twitter post. <br>Our contractors are paid $0.10  to provide a like & retweet.<br>Your tweet will receive up to 50 Likes & retweets. <br>The contractors submit their work for verification to receive Workpay.</p>
+    <br>Once you have paid the service fee, You will be required to join our submission chat.
+    <br>Your submission will be reviewed to ensure it matches our community guidelines. <p><em>If your tweet is rejected, a refund will be issued to your Money Button wallet within 24 hours.</em></p>
+    <br> Each time you purchase engagement through our service, <br>you will be awarded 1 WORKER token. <br>You can redeem 10 TOKENS for a free engagement listing.
+    <br> <em>You will receive WORKER tokens to your Money Button wallet within 24 hours of purchase.</em>
+    <br>Once you have acquired enough WORKER tokens, you can redeem them using the swipe button below.<br> then proceed to share the Tweet URL in our publishing chat.
 
-<p><em>Slide the Money Button purchase engagement. <br>Once you have completed the payment, you can submit the tweet URL for engagement.</em>
-
+<p><em><br>Slide the Money Button purchase engagement. <br>Once you have completed the payment, you can submit the tweet URL for engagement.</em>
+<center>
 <!-- Money Button -->
 <div class="money-button"
   data-to="21534"
-  data-amount="0.01"
+  data-amount="5.00"
   data-currency="USD"
   data-label="Buy Media"
   data-client-identifier="9981645a3e83f2941b9574288e85d182"data-button-id="1652826574446"
@@ -169,6 +176,23 @@
   data-on-error="handleFailedPayment"
   data-dev-mode="false"
      ></div>
+  <div id='my-money-button'></div>
+<script>
+  const div = document.getElementById('my-money-button')
+  moneyButton.render(div, {
+    to: "digitalcurrencydaily@moneybutton.com",
+      asset: "2ccf8d0ede01.asset@moneybutton.com",
+      amount: 10,
+    label: "WORKR",
+    clientIdentifier: "9981645a3e83f2941b9574288e85d182",
+    buttonId: "1652826574446",
+    buttonData: "{}",
+    type: "buy",
+    onPayment: function (arg) { console.log('onPayment', arg) },
+    onError: function (arg) { console.log('onError', arg) }
+  })
+</script>
+   </center> 
 
 <!-- Hidden content -->
 <div id="unlockable">
@@ -177,12 +201,12 @@
   <p>you need to submit the URL to the tweet.</p>
       <p>Join the</p> 
 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-dark" href="https://t.me/digitalcurrencydaily">
+                    <a class="btn btn-xl btn-outline-dark" href="https://t.me/+HDIzgaHNcNMyZGEx">
                         <i class="fas fa-download me-2"></i>
                         Telegram
                     </a>
                 </div>
-      <p>and to share the URL with our WorkGroup review team.</p></center>
+      <p><br>and to share the URL with our WorkGroup review team.</p></center>
  
     
 </div>
